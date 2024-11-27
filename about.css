@@ -1,0 +1,232 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif; /* Using Google Font */
+  background-color: #f4f4f4;
+  background-image: url("./images/amazing-travel-wallpaper-4k-background_839182-1725.avif"); /* Add your image path here */
+  background-size: cover; /* Make the image cover the full background */
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  padding: 0.2rem; /* Thin navbar */
+  display: flex;
+  justify-content: space-between; /* Evenly space items */
+  align-items: center;
+  position: fixed; /* Make the navbar fixed at the top */
+  width: 100%; /* Full width */
+  top: 0; /* Stick to the top */
+  z-index: 1000; /* Make sure it stays on top of other content */
+}
+
+/* Align the logo to the left */
+.agency_logo {
+  max-width: 100px; /* Limit the width */
+  height: auto; /* Maintain aspect ratio */
+  display: inline-block; /* Make sure it behaves like inline content */
+  margin-left: 20px; /* Add some space on the left */
+}
+
+/* Center the nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Center the links */
+  flex-grow: 1; /* Allow this section to take up available space */
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+/* Optional: Add padding to ensure nav links are centered relative to the logo */
+.navbar div.nav-container {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center the content */
+}
+
+/* Google fonts Styling */
+/* Material Icons style */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* Sidebar container styling */
+.social-sidebar {
+  position: fixed;
+  top: 50%; /* Center the sidebar vertically */
+  left: 0; /* Align to the left */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+  background-color: #333;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  z-index: 1000;
+}
+
+.social-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-sidebar li {
+  margin: 15px 0; /* Spacing between icons */
+}
+
+.social-sidebar a {
+  color: white; /* Icon color */
+  font-size: 24px; /* Icon size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Circular icons */
+  background-color: #555; /* Background color for the icons */
+  transition: background-color 0.3s ease;
+}
+
+.social-sidebar a:hover {
+  background-color: #888; /* Change background on hover */
+}
+
+/* Optional: Change individual icon colors */
+.social-sidebar a .fa-facebook-f {
+  color: #4267b2; /* Facebook color */
+}
+
+.social-sidebar a .fa-x-twitter {
+  color: #1da1f2; /* X (formerly Twitter) color */
+}
+
+.social-sidebar a .fa-linkedin-in {
+  color: #0077b5; /* LinkedIn color */
+}
+
+.social-sidebar a .fa-instagram {
+  color: #e1306c; /* Instagram color */
+}
+
+.social-sidebar a .fa-youtube {
+  color: #ff0000; /* YouTube color */
+}
+
+/* About Section */
+.about-section {
+  min-height: 65vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  padding-top: 1px; /* Offset for navbar */
+  color: white;
+}
+
+.about-section .about-content {
+  position: fixed;
+  z-index: 2;
+  color: white;
+  padding: 120px 40px 120px 200px;
+}
+
+.about-section h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.about-section .about-detail {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  border-radius: 5px;
+  padding: 25px;
+  margin-top: 80px;
+}
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  margin-bottom: 2rem;
+  text-transform: none;
+}
+
+
+/* Team Section */
+.team-section {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.team-section h1{
+  text-align: center;
+  align-content: center;
+  color: white;
+  font-size: 4rem;
+  max-width: 300px;
+}
+.team-member {
+  position: relative; /* Added for positioning the icon */
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 220px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.team-member .user-icon {
+  position: absolute; /* Position the icon absolutely within the team-member container */
+  top: 10px; /* Distance from the top */
+  left: 10px; /* Distance from the left */
+  font-size: 2rem; /* Adjust the size of the icon */
+  color: white;
+  background-color: #4267b2;
+  border-radius: 5px;
+  width: 2.5rem;
+  padding: 2px;
+}
+
+.team-member h3 {
+  font-size: 1.4rem;
+  color: white;
+  font-weight: 500;
+}
+
+.team-member p {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: white;
+  background-color: #4267b2;
+  border-radius: 5px;
+  height: 25px;
+  display: flex;
+  align-items: center; /* Align text vertically in the middle */
+  justify-content: center; /* Center the text horizontally */
+}

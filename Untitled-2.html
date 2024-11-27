@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Card Page</title>
+    <style>
+        /* Container for the cards */
+        /* Container for the cards */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Stylish card */
+        .card {
+            background: linear-gradient(135deg, #9ab5ff, #c4d5fa); /* Gradient background */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* 3D effect with shadow */
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s; /* Animation on hover */
+            color: white;
+        }
+
+        /* Hover effect */
+        .card:hover {
+            transform: translateY(-10px); /* Lifts the card on hover */
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* Deepens the shadow */
+        }
+
+        /* Card title styling */
+        .card-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Card body styling */
+        .card-body {
+            font-size: 16px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9); /* Slightly transparent white text */
+        }
+
+        /* Optional subtle border */
+        .card {
+            border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+        }    </style>
+</head>
+<body>
+
+<!-- Container for cards -->
+<div class="card-container" id="cardContainer"></div>
+
+<script>
+    // Data for the cards (could be dynamic data from an API)
+    const cardsData = [
+        { title: "Card 1", description: "This is the description for card 1." },
+        { title: "Card 2", description: "This is the description for card 2." },
+        { title: "Card 3", description: "This is the description for card 3." },
+        { title: "Card 4", description: "This is the description for card 4." },
+        { title: "Card 5", description: "This is the description for card 5." },
+        { title: "Card 5", description: "This is the description for card 5." },
+        { title: "Card 5", description: "This is the description for card 5." },
+        { title: "Card 5", description: "This is the description for card 5." }
+    ];
+
+    // Function to dynamically create cards
+    function createCard(card) {
+        // Create card div
+        const cardElement = document.createElement('div');
+        cardElement.classList.add('card');
+
+        // Add card title
+        const cardTitle = document.createElement('h3');
+        cardTitle.classList.add('card-title');
+        cardTitle.textContent = card.title;
+        cardElement.appendChild(cardTitle);
+
+        // Add card body
+        const cardBody = document.createElement('p');
+        cardBody.classList.add('card-body');
+        cardBody.textContent = card.description;
+        cardElement.appendChild(cardBody);
+
+        // Add click event
+        cardElement.addEventListener('click', function() {
+            alert(`You clicked on ${card.title}`);
+        });
+
+        return cardElement;
+    }
+
+    // Render cards dynamically
+    function renderCards() {
+        const cardContainer = document.getElementById('cardContainer');
+
+        // Loop through the card data and create each card
+        cardsData.forEach(card => {
+            const cardElement = createCard(card);
+            cardContainer.appendChild(cardElement);
+        });
+    }
+
+    // Call render function to display cards on page load
+    renderCards();
+</script>
+
+</body>
+</html>

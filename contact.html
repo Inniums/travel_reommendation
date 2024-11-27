@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navigation Bar</title>
+
+  <!-- Google Fonts (Roboto) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Google Material Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+
+  <!-- Link to Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/ac5a06a79f.js" crossorigin="anonymous"></script>
+
+  <!-- External CSS file -->
+  <link rel="stylesheet" href="./contact.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <img src="./images/mug-ways-high-resolution-logo-white-transparent.png" class="agency_logo" />
+    <ul class="nav-links">
+      <li><a href="./travel_recommendation.html">Home</a></li>
+      <li><a href="./contact.html">Contact Us</a></li>
+      <li><a href="./about.html">About Us</a></li>
+    </ul>
+  </nav>
+  <!-- Sidebar Container -->
+  <div class="social-sidebar">
+    <ul>
+      <li>
+        <a href="https://www.facebook.com/innocent.orih.inniums" target="_blank" target="_blank"><i
+            class="fab fa-facebook-f"></i></a>
+      </li>
+      <li>
+        <a href="https://x.com/OrihInnocent2" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/innocent-orih-57324013a/" target="_blank"><i
+            class="fab fa-linkedin-in"></i></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/innocentjohn5483/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/@orihinnocent8091" target="_blank"><i class="fab fa-youtube"></i></a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- contact form section -->
+  <div class="contact-container">
+    <div class="contact-intro">
+      <h1>Contact Us</h1>
+      <span>
+        <h3>Get in touch</h3>
+      </span>
+    </div>
+    <form class="contact-form">
+      <h2>We'd love to hear from you</h2>
+      <div>
+        <div><label for="name">Name:</label></div>
+        <div><input type="text" id="name" name="name" placeholder="Enter your name" required /></div>
+      </div>
+      <div>
+        <div><label for="email">Email:</label></div>
+        <div><input type="email" id="email" name="email" placeholder="Enter your email" required /></div>
+      </div>
+      <div>
+        <div><label for="subject">Subject:</label></div>
+        <div><input type="text" id="subject" name="subject" placeholder="Enter subject" required /></div>
+      </div>
+      <div>
+        <div><label for="message">Message:</label></div>
+        <div><textarea id="message" name="message" placeholder="Enter your message" rows="6" required></textarea></div>
+      </div>
+      <button type="submit" id="submit-contact">Send Message</button>
+    </form>
+  </div>
+  <script src="./contact.js"></script>
+</body>
+
+</html>

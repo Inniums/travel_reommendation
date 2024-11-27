@@ -1,0 +1,328 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif; /* Using Google Font */
+  background-color: #f4f4f4;
+  background-image: url("./images/amazing-travel-wallpaper-4k-background_839182-1725.avif"); /* Add your image path here */
+  background-size: cover; /* Make the image cover the full background */
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Ensure the body takes up the full viewport height */
+  background-attachment: fixed;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  padding: 0.2rem; /* Thin navbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Make the navbar fixed at the top */
+  width: 100%; /* Full width */
+  top: 0; /* Stick to the top */
+  z-index: 1000; /* Make sure it stays on top of other content */
+}
+
+/* agency logo for nav bar */
+.agency_logo {
+  max-width: 100px; /* Limit the width */
+  height: auto; /* Maintain aspect ratio */
+  display: inline-block; /* Make sure it behaves like inline content */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+/* Search Form */
+.search-form {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 50px; /* Semi-circular edges */
+  padding: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* Search icon before input */
+.search-icon {
+  color: #333;
+  margin-left: 10px;
+  font-size: 24px; /* Adjust size for material icon */
+  display: flex;
+  align-items: center;
+}
+
+/* Search bar with semi-circular edges */
+.search-bar {
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  background-color: transparent;
+  margin-left: 10px;
+}
+
+/* Buttons with semi-circular edges */
+.search-button,
+.reset-button {
+  padding: 8px 16px;
+  background-color: #04996c; /* Button background color */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 5px;
+}
+
+.search-button:hover,
+.reset-button:hover {
+  background-color: #b6c7b7; /* Hover color */
+}
+
+/* Google fonts Styling */
+/* Material Icons style */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* Sidebar container styling */
+.social-sidebar {
+  position: fixed;
+  top: 50%; /* Center the sidebar vertically */
+  left: 0; /* Align to the left */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+  background-color: #333;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  z-index: 1000;
+}
+
+.social-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-sidebar li {
+  margin: 15px 0; /* Spacing between icons */
+}
+
+.social-sidebar a {
+  color: white; /* Icon color */
+  font-size: 24px; /* Icon size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Circular icons */
+  background-color: #555; /* Background color for the icons */
+  transition: background-color 0.3s ease;
+}
+
+.social-sidebar a:hover {
+  background-color: #888; /* Change background on hover */
+}
+
+/* Optional: Change individual icon colors */
+.social-sidebar a .fa-facebook-f {
+  color: #4267b2; /* Facebook color */
+}
+
+.social-sidebar a .fa-x-twitter {
+  color: #1da1f2; /* X (formerly Twitter) color */
+}
+
+.social-sidebar a .fa-linkedin-in {
+  color: #0077b5; /* LinkedIn color */
+}
+
+.social-sidebar a .fa-instagram {
+  color: #e1306c; /* Instagram color */
+}
+
+.social-sidebar a .fa-youtube {
+  color: #ff0000; /* YouTube color */
+}
+
+/* Center the content slightly off the middle of the page */
+.content-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the left */
+  height: 100vh; /* Take up the entire height of the viewport */
+  padding: 0 40px; /* Add more padding on the sides */
+  background-color: transparent; /* Transparent background */
+  max-width: 400px; /* Set a fixed maximum width of 400px */
+  margin-left: 10%; /* Push content slightly to the right */
+  position: fixed;
+}
+
+/* Style for the heading */
+.content-center h1 {
+  font-family: "Roboto", sans-serif; /* Google font */
+  font-size: 60px; /* Set font size to 60px */
+  color: white; /* Set text color to white */
+  text-align: left; /* Align text to the left */
+  margin-bottom: 20px; /* Space between heading and description */
+}
+
+/* Style for the paragraph */
+.content-center p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: white; /* Set text color to white */
+  text-align: left; /* Align text to the left */
+  line-height: 1.6; /* Adjust line spacing */
+}
+
+/* Style for the book-now button */
+.book-now {
+  padding: 10px 20px; /* Add padding for the button */
+  font-size: 16px; /* Font size for button text */
+  color: white; /* Text color */
+  background-color: transparent; /* Transparent background */
+  border: 2px solid white; /* White border */
+  border-radius: 25px; /* Curvy edges */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transition effects */
+  margin-top: 20px; /* Space above the button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add slight box-shadow */
+}
+
+.book-now:hover {
+  background-color: white; /* Change background on hover */
+  color: #333; /* Change text color on hover */
+}
+
+/* Place Description Section styled as a sidebar with tiles */
+.place-description {
+    display: flex; /* Use flexbox to control layout */
+    flex-direction: column;
+    gap: 20px; /* Space between tiles */
+    position: absolute; /* Positioning the place description section */
+    top: 15vh; /* Adjust top distance from the navbar */
+    right: 80px; /* Distance from the right side of the viewport */
+    width: 600px; /* Set a fixed width for the sidebar */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Sidebar sliding */
+  }
+  
+/* Place About Title with sliding effect */
+.place-about {
+  color: white;
+  background-color: #575757;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for tile effect */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transform: translateX(0); /* Default state */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Add transition */
+}
+
+.place-about.hidden {
+  opacity: 0;
+  transform: translateX(-100%); /* Slide out to the left */
+}
+
+.place-about.visible {
+  opacity: 1;
+  transform: translateX(0); /* Slide back in */
+}
+
+  
+  /* Each Place Item (Image + Text) styled as a tile */
+  .place-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for tile effect */
+    overflow: hidden;
+    padding: 15px;
+    opacity: 1;
+    transform: translateX(0); /* Default state */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Sliding effect */
+  }
+  
+  .place-item.hidden {
+    opacity: 0;
+    transform: translateX(-100%); /* Slide out to the left */
+  }
+  
+  .place-item.visible {
+    opacity: 1;
+    transform: translateX(0); /* Slide back in */
+  }
+  
+  /* Place Image within each tile */
+  .place-image {
+    width: 100%; /* Make the image take full width of the container */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .place-name {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+  /* Place Text within each tile */
+  .place-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: white;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  .visit {
+    padding: 10px 20px; /* Add padding for the button */
+    font-size: 16px; /* Font size for button text */
+    color: white; /* Text color */
+    background-color: transparent; /* Transparent background */
+    border: 2px solid white; /* White border */
+    border-radius: 25px; /* Curvy edges */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition effects */
+    margin-top: 20px; /* Space above the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add slight box-shadow */
+  }
+  
+  .visit:hover {
+    background-color: white; /* Change background on hover */
+    color: #333; /* Change text color on hover */
+  }
+  
